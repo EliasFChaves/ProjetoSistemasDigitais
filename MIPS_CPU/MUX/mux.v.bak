@@ -1,0 +1,13 @@
+module mux(sel, data1, data2, out);
+
+	input [31:0] data1; 
+	input [31:0] data2;
+	input sel;
+	output [31:0] out;
+
+	if(sel)
+		assign out = data2;
+	else
+		assign out = data1;
+	
+endmodule
