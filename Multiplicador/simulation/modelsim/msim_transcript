@@ -1,0 +1,96 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do Multiplicador_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/21.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Counter {C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Counter/Counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:47:20 on May 19,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Counter" C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Counter/Counter.v 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 10:47:20 on May 19,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/CONTROL {C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/CONTROL/CONTROL.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:47:20 on May 19,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/CONTROL" C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/CONTROL/CONTROL.v 
+# -- Compiling module CONTROL
+# 
+# Top level modules:
+# 	CONTROL
+# End time: 10:47:20 on May 19,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Adder {C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Adder/Adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:47:20 on May 19,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Adder" C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Adder/Adder.v 
+# -- Compiling module Adder
+# 
+# Top level modules:
+# 	Adder
+# End time: 10:47:20 on May 19,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/ACC {C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/ACC/ACC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:47:20 on May 19,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/ACC" C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/ACC/ACC.v 
+# -- Compiling module ACC
+# 
+# Top level modules:
+# 	ACC
+# End time: 10:47:20 on May 19,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador {C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Multiplicador.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:47:20 on May 19,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador" C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Multiplicador.v 
+# -- Compiling module Multiplicador
+# 
+# Top level modules:
+# 	Multiplicador
+# End time: 10:47:20 on May 19,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador {C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Multiplicador_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:47:20 on May 19,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador" C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Multiplicador_tb.v 
+# -- Compiling module Multiplicador_tb
+# 
+# Top level modules:
+# 	Multiplicador_tb
+# End time: 10:47:20 on May 19,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Multiplicador_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Multiplicador_tb 
+# Start time: 10:47:20 on May 19,2023
+# Loading work.Multiplicador_tb
+# Loading work.Multiplicador
+# Loading work.ACC
+# Loading work.Adder
+# Loading work.CONTROL
+# Loading work.Counter
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Multiplicador_tb.v(40)
+#    Time: 1720 ns  Iteration: 0  Instance: /Multiplicador_tb
+# Break in Module Multiplicador_tb at C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Multiplicador/Multiplicador_tb.v line 40
+# End time: 10:48:31 on May 19,2023, Elapsed time: 0:01:11
+# Errors: 0, Warnings: 0
