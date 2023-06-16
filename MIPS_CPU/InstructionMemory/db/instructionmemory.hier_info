@@ -1,0 +1,46 @@
+|instructionmemory
+address[0] => ~NO_FANOUT~
+address[1] => ~NO_FANOUT~
+address[2] => ~NO_FANOUT~
+address[3] => ~NO_FANOUT~
+address[4] => ~NO_FANOUT~
+address[5] => ~NO_FANOUT~
+address[6] => ~NO_FANOUT~
+address[7] => ~NO_FANOUT~
+address[8] => ~NO_FANOUT~
+address[9] => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+dataOut[0] <= <GND>
+dataOut[1] <= <GND>
+dataOut[2] <= <GND>
+dataOut[3] <= <GND>
+dataOut[4] <= <GND>
+dataOut[5] <= <GND>
+dataOut[6] <= <GND>
+dataOut[7] <= <GND>
+dataOut[8] <= <GND>
+dataOut[9] <= <GND>
+dataOut[10] <= <GND>
+dataOut[11] <= <GND>
+dataOut[12] <= <GND>
+dataOut[13] <= <GND>
+dataOut[14] <= <GND>
+dataOut[15] <= <GND>
+dataOut[16] <= <GND>
+dataOut[17] <= <GND>
+dataOut[18] <= <GND>
+dataOut[19] <= <GND>
+dataOut[20] <= <GND>
+dataOut[21] <= <GND>
+dataOut[22] <= <GND>
+dataOut[23] <= <GND>
+dataOut[24] <= <GND>
+dataOut[25] <= <GND>
+dataOut[26] <= <GND>
+dataOut[27] <= <GND>
+dataOut[28] <= <GND>
+dataOut[29] <= <GND>
+dataOut[30] <= <GND>
+dataOut[31] <= <GND>
+
+
