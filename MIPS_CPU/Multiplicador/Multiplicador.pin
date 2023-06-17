@@ -895,7 +895,7 @@ GXB_GND*                     : V11       :        :                   :         
 GXB_GND*                     : V12       :        :                   :         : 3B        :                
 VCCINT                       : V13       : power  :                   : 1.2V    :           :                
 GND                          : V14       : gnd    :                   :         :           :                
-reset                        : V15       : input  : 2.5 V             :         : 3A        : N              
+Reset                        : V15       : input  : 2.5 V             :         : 3A        : N              
 GND                          : V16       : gnd    :                   :         :           :                
 VCCINT                       : V17       : power  :                   : 1.2V    :           :                
 GND                          : V18       : gnd    :                   :         :           :                

@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "Multiplicador")
-  (DATE "06/17/2023 09:52:42")
+  (DATE "06/17/2023 10:07:22")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition")
@@ -418,7 +418,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE reset\~input)
+    (INSTANCE Reset\~input)
     (DELAY
       (ABSOLUTE
         (IOPATH i o (678:678:678) (755:755:755))
@@ -427,7 +427,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiv_clkctrl")
-    (INSTANCE reset\~inputclkctrl)
+    (INSTANCE Reset\~inputclkctrl)
     (DELAY
       (ABSOLUTE
         (PORT inclk[0] (328:328:328) (332:332:332))

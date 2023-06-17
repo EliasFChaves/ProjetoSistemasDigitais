@@ -1,5 +1,5 @@
 Fitter report for Multiplicador
-Sat Jun 17 09:52:29 2023
+Sat Jun 17 10:07:08 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Jun 17 09:52:29 2023       ;
+; Fitter Status                      ; Successful - Sat Jun 17 10:07:08 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Multiplicador                               ;
 ; Top-level Entity Name              ; Multiplicador                               ;
@@ -162,8 +162,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processors 3-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -373,8 +372,8 @@ The pin-out file can be found in C:/Users/elias/Documents/GitHub/ProjetoSistemas
 ; Multiplicando[7]  ; C17   ; 7        ; 63           ; 91           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; Multiplicando[8]  ; D16   ; 8        ; 53           ; 91           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; Multiplicando[9]  ; A13   ; 8        ; 50           ; 91           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; Reset             ; V15   ; 3A       ; 57           ; 0            ; 21           ; 4                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; St                ; T30   ; 6        ; 117          ; 46           ; 7            ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; reset             ; V15   ; 3A       ; 57           ; 0            ; 21           ; 4                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +-------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -1287,7 +1286,7 @@ The pin-out file can be found in C:/Users/elias/Documents/GitHub/ProjetoSistemas
 ; V12      ; 43         ; 3B       ; GXB_GND*                                              ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; V13      ;            ;          ; VCCINT                                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V14      ;            ;          ; GND                                                   ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; V15      ; 124        ; 3A       ; reset                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; V15      ; 124        ; 3A       ; Reset                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V16      ;            ;          ; GND                                                   ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V17      ;            ;          ; VCCINT                                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V18      ;            ;          ; GND                                                   ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1407,7 +1406,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Produto[30]       ; Incomplete set of assignments ;
 ; Produto[31]       ; Incomplete set of assignments ;
 ; Clk               ; Incomplete set of assignments ;
-; reset             ; Incomplete set of assignments ;
+; Reset             ; Incomplete set of assignments ;
 ; St                ; Incomplete set of assignments ;
 ; Multiplicador[0]  ; Incomplete set of assignments ;
 ; Multiplicador[1]  ; Incomplete set of assignments ;
@@ -1476,7 +1475,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Produto[30]       ; Missing location assignment   ;
 ; Produto[31]       ; Missing location assignment   ;
 ; Clk               ; Missing location assignment   ;
-; reset             ; Missing location assignment   ;
+; Reset             ; Missing location assignment   ;
 ; St                ; Missing location assignment   ;
 ; Multiplicador[0]  ; Missing location assignment   ;
 ; Multiplicador[1]  ; Missing location assignment   ;
@@ -1567,7 +1566,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Produto[30]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Produto[31]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Clk               ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; reset             ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; Reset             ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; St                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Multiplicador[0]  ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Multiplicador[1]  ; Input    ; (6) 1218 ps   ; --            ; --                    ; --  ; --   ;
@@ -1610,7 +1609,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout            ; Pad To Core Index ; Setting ;
 +--------------------------------+-------------------+---------+
 ; Clk                            ;                   ;         ;
-; reset                          ;                   ;         ;
+; Reset                          ;                   ;         ;
 ; St                             ;                   ;         ;
 ; Multiplicador[0]               ;                   ;         ;
 ; Multiplicador[1]               ;                   ;         ;
@@ -1686,7 +1685,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ACC:acc|Saidas[25]~39 ; LCCOMB_X71_Y87_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; ACC:acc|Saidas[7]~5   ; LCCOMB_X71_Y87_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; Clk                   ; PIN_W15            ; 70      ; Clock        ; yes    ; Global Clock         ; GCLK29           ; --                        ;
-; reset                 ; PIN_V15            ; 4       ; Async. clear ; yes    ; Global Clock         ; GCLK28           ; --                        ;
+; Reset                 ; PIN_V15            ; 4       ; Async. clear ; yes    ; Global Clock         ; GCLK28           ; --                        ;
 +-----------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1696,7 +1695,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Clk   ; PIN_W15  ; 70      ; 17                                   ; Global Clock         ; GCLK29           ; --                        ;
-; reset ; PIN_V15  ; 4       ; 0                                    ; Global Clock         ; GCLK28           ; --                        ;
+; Reset ; PIN_V15  ; 4       ; 0                                    ; Global Clock         ; GCLK28           ; --                        ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1948,7 +1947,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Produto[30]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Produto[31]        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; reset              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; Reset              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; St                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Multiplicador[0]   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Multiplicador[1]   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2051,7 +2050,7 @@ Info (332154): The derive_clock_uncertainty command did not apply clock uncertai
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node Clk~input (placed in PIN W15 (CLKIO13, DIFFCLK_7n, REFCLK2n)) File: C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v Line: 2
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G29
-Info (176353): Automatically promoted node reset~input (placed in PIN V15 (CLKIO12, DIFFCLK_7p, REFCLK2p)) File: C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v Line: 2
+Info (176353): Automatically promoted node Reset~input (placed in PIN V15 (CLKIO12, DIFFCLK_7p, REFCLK2p)) File: C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v Line: 2
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G28
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2074,7 +2073,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  81 pins available
         Info (176213): I/O bank number 8B does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  2 pins available
         Info (176213): I/O bank number 9 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  0 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -2087,21 +2086,21 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV GX Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin Clk uses I/O standard 2.5 V at W15 File: C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v Line: 2
-    Info (169178): Pin reset uses I/O standard 2.5 V at V15 File: C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v Line: 2
+    Info (169178): Pin Reset uses I/O standard 2.5 V at V15 File: C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v Line: 2
 Info (144001): Generated suppressed messages file C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5831 megabytes
-    Info: Processing ended: Sat Jun 17 09:52:29 2023
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 5830 megabytes
+    Info: Processing ended: Sat Jun 17 10:07:09 2023
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +----------------------------+

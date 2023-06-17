@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "06/17/2023 09:52:42"
+// DATE "06/17/2023 10:07:22"
 
 // 
 // Device: Altera EP4CGX150DF31I7AD Package FBGA896
@@ -36,7 +36,7 @@ module Multiplicador (
 	Multiplicando,
 	Multiplicador,
 	Produto,
-	reset);
+	Reset);
 input 	Clk;
 input 	St;
 output 	Done;
@@ -44,7 +44,7 @@ output 	Idle;
 input 	[15:0] Multiplicando;
 input 	[15:0] Multiplicador;
 output 	[31:0] Produto;
-input 	reset;
+input 	Reset;
 
 // Design Ports Information
 // Done	=>  Location: PIN_E19,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -82,7 +82,7 @@ input 	reset;
 // Produto[30]	=>  Location: PIN_E16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Produto[31]	=>  Location: PIN_C19,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Clk	=>  Location: PIN_W15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// reset	=>  Location: PIN_V15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Reset	=>  Location: PIN_V15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // St	=>  Location: PIN_T30,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Multiplicador[0]	=>  Location: PIN_T29,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Multiplicador[1]	=>  Location: PIN_F17,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -171,8 +171,8 @@ wire \Clk~input_o ;
 wire \Clk~inputclkctrl_outclk ;
 wire \St~input_o ;
 wire \control|Selector0~0_combout ;
-wire \reset~input_o ;
-wire \reset~inputclkctrl_outclk ;
+wire \Reset~input_o ;
+wire \Reset~inputclkctrl_outclk ;
 wire \control|state.S0~q ;
 wire \control|Load~0_combout ;
 wire \counter|i~31_combout ;
@@ -859,26 +859,26 @@ defparam \control|Selector0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X57_Y0_N22
-cycloneiv_io_ibuf \reset~input (
-	.i(reset),
+cycloneiv_io_ibuf \Reset~input (
+	.i(Reset),
 	.ibar(gnd),
-	.o(\reset~input_o ));
+	.o(\Reset~input_o ));
 // synopsys translate_off
-defparam \reset~input .bus_hold = "false";
-defparam \reset~input .simulate_z_as = "z";
+defparam \Reset~input .bus_hold = "false";
+defparam \Reset~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: CLKCTRL_G28
-cycloneiv_clkctrl \reset~inputclkctrl (
+cycloneiv_clkctrl \Reset~inputclkctrl (
 	.ena(vcc),
-	.inclk({vcc,vcc,vcc,\reset~input_o }),
+	.inclk({vcc,vcc,vcc,\Reset~input_o }),
 	.clkselect(2'b00),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.outclk(\reset~inputclkctrl_outclk ));
+	.outclk(\Reset~inputclkctrl_outclk ));
 // synopsys translate_off
-defparam \reset~inputclkctrl .clock_type = "global clock";
-defparam \reset~inputclkctrl .ena_register_mode = "none";
+defparam \Reset~inputclkctrl .clock_type = "global clock";
+defparam \Reset~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
 // Location: FF_X71_Y87_N13
@@ -886,7 +886,7 @@ dffeas \control|state.S0 (
 	.clk(\Clk~inputclkctrl_outclk ),
 	.d(\control|Selector0~0_combout ),
 	.asdata(vcc),
-	.clrn(!\reset~inputclkctrl_outclk ),
+	.clrn(!\Reset~inputclkctrl_outclk ),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
@@ -2344,7 +2344,7 @@ dffeas \control|state.S1 (
 	.clk(\Clk~inputclkctrl_outclk ),
 	.d(\control|Selector1~0_combout ),
 	.asdata(vcc),
-	.clrn(!\reset~inputclkctrl_outclk ),
+	.clrn(!\Reset~inputclkctrl_outclk ),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
@@ -2363,7 +2363,7 @@ dffeas \control|state.S2 (
 	.clk(\Clk~inputclkctrl_outclk ),
 	.d(gnd),
 	.asdata(\control|state.S1~q ),
-	.clrn(!\reset~inputclkctrl_outclk ),
+	.clrn(!\Reset~inputclkctrl_outclk ),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
@@ -2399,7 +2399,7 @@ dffeas \control|state.S3 (
 	.clk(\Clk~inputclkctrl_outclk ),
 	.d(\control|state~10_combout ),
 	.asdata(vcc),
-	.clrn(!\reset~inputclkctrl_outclk ),
+	.clrn(!\Reset~inputclkctrl_outclk ),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),

@@ -1,5 +1,5 @@
-module CONTROL(Clk, K, Load, Sh, Ad, St, M, Idle, Done, Reset);
-	input Clk, K, St, M, Reset;
+module CONTROL(Clk, K, Load, Sh, Ad, St, M, Idle, Done, reset);
+	input Clk, K, St, M, reset;
 	output reg Idle, Sh, Done, Load, Ad;
 
 	// Declare state register
@@ -32,8 +32,8 @@ module CONTROL(Clk, K, Load, Sh, Ad, St, M, Idle, Done, Reset);
 	end
 
 	// Determine the next state
-	always @ (posedge Clk or posedge Reset) begin
-		if (Reset)
+	always @ (posedge Clk or posedge reset) begin
+		if (reset)
 			state <= S0;
 		else
 			case (state)

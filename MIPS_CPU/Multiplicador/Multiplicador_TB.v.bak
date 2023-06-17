@@ -2,9 +2,13 @@
 
 module Multiplicador_TB(); 
 	wire [31:0] produto;
-	wire idle, done;
-	reg st,reset,clk;
-	reg [15:0] multiplicando,multiplicador;
+	wire idle;
+	wire done;
+	reg st;
+	reg clk;
+	reg [15:0] multiplicando;
+	reg [15:0] multiplicador;
+	reg reset;
 	
 	reg [16:0] ws;
 	reg wl, wsh, wad, wk;
@@ -31,6 +35,16 @@ module Multiplicador_TB();
 		reset = 0;
 	end
 	
+	//para testar somente uma multiplicação
+//	initial begin		
+//		multiplicador = 65535;
+//		multiplicando = 65535;
+//		
+//		#70 st = 0;
+//		#800 $finish;
+//	end
+
+	//para testar todas as possibilidades
 	integer i, j;
 	reg fail = 0;
 	initial begin
@@ -39,7 +53,7 @@ module Multiplicador_TB();
 		#680
 			
 		multiplicando = 65536;		
-		for(i = 0; i < 65536;i = i+3) begin
+		for(i = 0; i < 65536;i = i+1) begin
 			multiplicador = i;
 			#680 
 			if(done) begin
@@ -58,5 +72,11 @@ module Multiplicador_TB();
 	always begin
 		#10 clk = ~clk;
 	end
+	
+	initial $init_signal_spy("/Multiplicador_TB/DUT/ws", "ws", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wl", "wl", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wsh", "wsh", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wad", "wad", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wk", "wk", 1);
 
 endmodule

@@ -1,5 +1,5 @@
-module Multiplicador(Clk, St, Done, Idle, Multiplicando, Multiplicador, Produto, reset);
-	input Clk, St, reset;
+module Multiplicador(Clk, St, Done, Idle, Multiplicando, Multiplicador, Produto, Reset);
+	input Clk, St, Reset;
 	input [15:0]Multiplicando, Multiplicador;
 	output Idle, Done;
 	output [31:0]Produto;
@@ -19,7 +19,7 @@ module Multiplicador(Clk, St, Done, Idle, Multiplicando, Multiplicador, Produto,
 	
 	Adder adder (.Soma(w_soma), .OperandoA(Multiplicando), .OperandoB(w_produto[31:16]));
 	
-	CONTROL control (.reset(reset), .Clk(Clk), .K(w_k), .Load(w_load), .Sh(w_sh), .Ad(w_ad), .St(St), .M(w_produto[0]), .Idle(Idle), .Done(Done));
+	CONTROL control (.Reset(Reset), .Clk(Clk), .K(w_k), .Load(w_load), .Sh(w_sh), .Ad(w_ad), .St(St), .M(w_produto[0]), .Idle(Idle), .Done(Done));
 	
 	Counter counter(.Load(w_load), .Clk(Clk), .K(w_k));
 	

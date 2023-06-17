@@ -67,7 +67,7 @@ Produto[28] << w_produto[28].DB_MAX_OUTPUT_PORT_TYPE
 Produto[29] << w_produto[29].DB_MAX_OUTPUT_PORT_TYPE
 Produto[30] << w_produto[30].DB_MAX_OUTPUT_PORT_TYPE
 Produto[31] << w_produto[31].DB_MAX_OUTPUT_PORT_TYPE
-reset => reset.IN1
+Reset => Reset.IN1
 
 
 |Multiplicador|ACC:acc
@@ -320,7 +320,7 @@ St => Selector0.IN2
 M => Ad.DATAB
 Idle <= Idle.DB_MAX_OUTPUT_PORT_TYPE
 Done <= Done.DB_MAX_OUTPUT_PORT_TYPE
-reset => state~3.DATAIN
+Reset => state~3.DATAIN
 
 
 |Multiplicador|Counter:counter
