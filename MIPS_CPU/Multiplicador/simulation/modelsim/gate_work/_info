@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/simulation/modelsim
+vhard_block
+Z1 !s110 1687005522
+!i10b 1
+!s100 lz5ifPXUD9V2>5[fa3OR13
+IHAjh<HWWD3?Nf]IKV`TJX0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1687005425
+Z4 8Multiplicador_7_1200mv_100c_slow.vo
+Z5 FMultiplicador_7_1200mv_100c_slow.vo
+L0 4375
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1687005522.000000
+Z8 !s107 Multiplicador_7_1200mv_100c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Multiplicador_7_1200mv_100c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vMultiplicador
+R1
+!i10b 1
+!s100 4JEboalO?RKo4eM2QUD`b1
+IYj;cOYFMmjYjoP3kj[UDm2
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@multiplicador
+vMultiplicador_TB
+R1
+!i10b 1
+!s100 dd1<n<VQK98eLABGX2UAe1
+I>_Jl>m9ISm>0DOfb[DB260
+R2
+R0
+w1687004423
+8C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_tb.v
+FC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_tb.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador
+R12
+n@multiplicador_@t@b
