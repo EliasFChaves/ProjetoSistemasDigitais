@@ -1,43 +1,78 @@
-`timescale 1ns/100ps
-module Multiplicador_tb();
-	reg [3:0]Multiplicando, Multiplicador;
-	reg Clk, St, Reset;
-	wire [7:0]Produto; 
-	wire Idle, Done;
-	integer j,k;
+`timescale 1ns/10ps
+
+module Multiplicador_TB(); 
+	wire [31:0] produto;
+	wire idle, done;
+	reg st,reset,clk;
+	reg [15:0] multiplicando, multiplicador;
 	
-	Multiplicador DUT (
-	.Clk(Clk), 
-	.St(St), 
-	.Done(Done), 
-	.Idle(Idle), 
-	.Multiplicando(Multiplicando), 
-	.Multiplicador(Multiplicador), 
-	.Produto(Produto), 
-	.Reset(Reset)
+	reg [16:0] ws;
+	reg wl, wsh, wad, wk;
+	
+	Multiplicador DUT(
+		.Produto(produto),
+		.Idle(idle),
+		.Done(done),
+		.St(st),
+		.Clk(clk),
+		.Multiplicando(multiplicando),
+		.Multiplicador(multiplicador),
+		.Reset(reset)
 	);
 	
+	//iniciando entradas
+	initial begin
+		reset = 0;
+		st = 1;
+		clk = 0;
+		#5		
+		reset = 1;
+		#15
+		reset = 0;
+	end
+	
+	//para testar somente uma multiplicação
+//	initial begin		
+//		multiplicador = 65535;
+//		multiplicando = 65535;
+//		
+//		#70 st = 0;
+//		#800 $finish;
+//	end
+
+	//para testar todas as possibilidades
+	integer i, j;
+	reg fail = 0;
+	initial begin
+		multiplicando = 0;
+		multiplicador = 0;
+		#680
+			
+		multiplicando = 65536;		
+		for(i = 0; i < 65536;i = i+3) begin
+			multiplicador = i;
+			#680 
+			if(done) begin
+				if(produto != i*j)begin
+					$display("Erro:%dx%d = %d",i,1,produto);
+					fail = 1;
+				end
+				//else $display("%dx%d = %d",i,j,produto);
+			end
+		end
+		if(fail) $display("Falhou o multiplicador");
+		else		$display("Deu bom, soh sucesso");
+		#20 $finish;		
+	end
+	
 	always begin
-	#5 Clk=!Clk;
-	end
-	initial begin
-	#20 for(j = 0; j<16; j = j+1)
-		 begin
-		 Multiplicando=0;
-			for(j = 0; j<16; j = j+1)
-				#100 Multiplicando = Multiplicando+1;
-			#100 Multiplicador = Multiplicador+1;
-		 end
-	#100
-   $stop;
+		#10 clk = ~clk;
 	end
 	
-	//applying initial conditions
-	initial begin
-		Clk=0;Reset=1;St=0;
-		Multiplicando=0;Multiplicador=0;
-		#10 Reset=0;
-		#20 St=1;
-	end
-	
+	initial $init_signal_spy("/Multiplicador_TB/DUT/ws", "ws", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wl", "wl", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wsh", "wsh", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wad", "wad", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/wk", "wk", 1);
+
 endmodule

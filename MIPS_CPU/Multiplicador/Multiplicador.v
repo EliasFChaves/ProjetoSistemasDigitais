@@ -1,13 +1,13 @@
 module Multiplicador(Clk, St, Done, Idle, Multiplicando, Multiplicador, Produto, reset);
 	input Clk, St, reset;
-	input [3:0]Multiplicando, Multiplicador;
+	input [15:0]Multiplicando, Multiplicador;
 	output Idle, Done;
-	output [7:0]Produto;
+	output [31:0]Produto;
 	
-	wire [8:0] w_produto;
-	assign Produto = w_produto[7:0];
+	wire [32:0] w_produto;
+	assign Produto = w_produto[31:0];
 	
-	wire[4:0] w_soma;
+	wire[16:0] w_soma;
 	
 	wire w_load;
 	wire w_sh;
@@ -17,7 +17,7 @@ module Multiplicador(Clk, St, Done, Idle, Multiplicando, Multiplicador, Produto,
 	
 	ACC acc (.Load(w_load), .Sh(w_sh), .Ad(w_ad), .Clk(Clk), .Entradas({w_soma, Multiplicador}), .Saidas(w_produto));
 	
-	Adder adder (.Soma(w_soma), .OperandoA(Multiplicando), .OperandoB(w_produto[7:4]));
+	Adder adder (.Soma(w_soma), .OperandoA(Multiplicando), .OperandoB(w_produto[31:16]));
 	
 	CONTROL control (.reset(reset), .Clk(Clk), .K(w_k), .Load(w_load), .Sh(w_sh), .Ad(w_ad), .St(St), .M(w_produto[0]), .Idle(Idle), .Done(Done));
 	
