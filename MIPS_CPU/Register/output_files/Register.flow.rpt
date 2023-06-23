@@ -1,5 +1,5 @@
 Flow report for Register
-Thu Jun 01 16:46:07 2023
+Fri Jun 23 17:00:53 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 01 16:46:07 2023       ;
+; Flow Status                        ; Successful - Fri Jun 23 17:00:53 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Register                                    ;
 ; Top-level Entity Name              ; Register                                    ;
@@ -68,29 +68,37 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/01/2023 16:45:33 ;
+; Start date & time ; 06/23/2023 16:59:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Register            ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 123598314775251.168564873208716        ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 450635862118.168755038727040           ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Register_TB    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Register_TB                            ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; Register_TB.v                          ; --            ; --          ; Register_TB    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Register_TB                            ; --            ; --          ; Register_TB    ;
+; EDA_TEST_BENCH_NAME                  ; Register_TB                            ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 100                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; -40                                    ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -98,12 +106,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4831 MB             ; 00:00:09                           ;
-; Fitter               ; 00:00:12     ; 1.0                     ; 5827 MB             ; 00:00:13                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4755 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4863 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4722 MB             ; 00:00:01                           ;
-; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:27                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4820 MB             ; 00:00:47                           ;
+; Fitter               ; 00:00:26     ; 1.0                     ; 5824 MB             ; 00:00:41                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4754 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 4867 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4719 MB             ; 00:00:02                           ;
+; Total                ; 00:01:03     ; --                      ; --                  ; 00:01:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,11 +120,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

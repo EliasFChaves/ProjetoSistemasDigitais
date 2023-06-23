@@ -1,0 +1,13 @@
+module extend #(parameter DATA_WIDTH=32)( 
+	input [DATA_WIDTH-1:0] in; 
+	output [DATA_WIDTH-1:0] out;
+)	
+	
+	// Extensão de sinal
+	if (in[15]) begin
+		assign out = {16'hFFFF,in[15:0]};
+	end
+	else begin
+		assign out = {16'h0,in[15:0]};
+   end
+endmodule

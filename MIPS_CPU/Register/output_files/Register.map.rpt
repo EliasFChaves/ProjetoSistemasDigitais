@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Register
-Thu Jun 01 16:45:43 2023
+Fri Jun 23 17:00:07 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |Register
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,7 +43,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 01 16:45:43 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 23 17:00:07 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Register                                    ;
 ; Top-level Entity Name              ; Register                                    ;
@@ -165,13 +166,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                  ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------+---------+
-; Register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Trabalho_MIPS/Register/Register.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; Register.v                       ; yes             ; User Verilog HDL File  ; C:/Quartus/MIPS_CPU/MIPS_CPU/Register/Register.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -183,7 +184,7 @@ refer to the applicable agreement for further details.
 ;                          ;                  ;
 ; DSP block 9-bit elements ; 0                ;
 ;                          ;                  ;
-; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out node     ; Clk~input        ;
 ; Maximum fan-out          ; 32               ;
 ; Total fan-out            ; 194              ;
 ; Average fan-out          ; 1.18             ;
@@ -215,6 +216,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Register ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-------------------+---------------------------------+
@@ -244,12 +255,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun 01 16:45:32 2023
+    Info: Processing started: Fri Jun 23 16:59:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Register -c Register
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: Register File: C:/Users/elias/OneDrive/Documentos/UNIFEI/7_Semestre/ELTD15/Trabalho_MIPS/Register/Register.v Line: 1
+    Info (12023): Found entity 1: Register File: C:/Quartus/MIPS_CPU/MIPS_CPU/Register/Register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_tb.v
+    Info (12023): Found entity 1: Register_TB File: C:/Quartus/MIPS_CPU/MIPS_CPU/Register/Register_TB.v Line: 2
 Info (12127): Elaborating entity "Register" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -259,9 +272,9 @@ Info (21057): Implemented 98 device resources after synthesis - the final resour
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 32 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Thu Jun 01 16:45:43 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Fri Jun 23 17:00:07 2023
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:47
 
 

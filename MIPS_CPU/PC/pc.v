@@ -1,16 +1,14 @@
 module pc(
-	input Reset, clk,
-	output reg [9:0] count
+	input Clk, Reset, 
+	output [9:0] address
 );
-	always @ (posedge clk, posedge Reset) 
-	begin									
-			if (Reset) 
-			begin
-					count = 10'b0;
-			end 
-			else 
-			begin
-					count = count + 10'b1;
-			end
+	reg [9:0]regpc = 10'b0;
+	always@(posedge Clk or posedge Reset) begin 
+		if(Reset)
+			regpc <= 10'b0;
+		else
+			regpc <= regpc + 10'b1;
 	end
-endmodule
+
+	assign address = regpc;
+endmodule 

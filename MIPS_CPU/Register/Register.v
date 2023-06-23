@@ -1,13 +1,14 @@
-module Register(
-	input rst, clk,
-	input [31:0] D,
-	output reg  [31:0] Q
+module Register #(parameter DATA_WIDTH=32)(
+	input [DATA_WIDTH-1:0] in,
+	input Clk, Reset, 
+	output reg [DATA_WIDTH-1:0] out
 );
-	
-	always @(posedge clk or posedge rst) 
-	begin
-		if (rst) Q <= 0;
-		else     Q <= D;
-	end
+	always @(posedge Clk, posedge Reset)
+		if(Reset) begin
+			out <= 0;
+		end
+		else begin
+			out <= in;
+		end
 	
 endmodule 
