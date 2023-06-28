@@ -6,8 +6,8 @@ module Multiplicador_TB();
 	reg st,reset,clk;
 	reg [15:0] multiplicando,multiplicador;
 	
-	reg [16:0] ws;
-	reg wl, wsh, wad, wk;
+	reg [16:0] w_soma;
+	reg w_load, w_sh, w_ad, w_k;
 	
 	Multiplicador DUT(
 		.Produto(produto),
@@ -31,19 +31,19 @@ module Multiplicador_TB();
 		reset = 0;
 	end
 	
-	integer i, j;
+	integer i;
 	reg fail = 0;
 	initial begin
 		multiplicando = 0;
 		multiplicador = 0;
 		#680
 			
-		multiplicando = 65536;		
+		multiplicando = 65535;		
 		for(i = 0; i < 65536;i = i+3) begin
 			multiplicador = i;
 			#680 
 			if(done) begin
-				if(produto != i*j)begin
+				if(produto != i*multiplicando)begin
 					$display("Erro:%dx%d = %d",i,1,produto);
 					fail = 1;
 				end
@@ -52,17 +52,17 @@ module Multiplicador_TB();
 		end
 		if(fail) $display("Falhou o multiplicador");
 		else		$display("Deu bom, soh sucesso");
-		#20 $finish;		
+		#20 $stop;		
 	end
 	
 	always begin
 		#10 clk = ~clk;
 	end
 	
-	initial $init_signal_spy("/Multiplicador_TB/DUT/ws", "ws", 1);
-	 initial $init_signal_spy("/Multiplicador_TB/DUT/wl", "wl", 1);
-	 initial $init_signal_spy("/Multiplicador_TB/DUT/wsh", "wsh", 1);
-	 initial $init_signal_spy("/Multiplicador_TB/DUT/wad", "wad", 1);
-	 initial $init_signal_spy("/Multiplicador_TB/DUT/wk", "wk", 1);
+	initial $init_signal_spy("/Multiplicador_TB/DUT/w_soma", "w_soma", 1);
+	 initial $init_signal_spy("/Multiplicador_TB/DUT/w_load", "w_load", 1);
+	 initial $init_signal_spy("/Multiplicador_TB/DUT/w_sh", "w_sh", 1);
+	 initial $init_signal_spy("/Multiplicador_TB/DUT/w_ad", "w_ad", 1);
+	 initial $init_signal_spy("/Multiplicador_TB/DUT/w_k", "w_k", 1);
 
 endmodule

@@ -7,34 +7,9 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-<<<<<<< Updated upstream
-Z0 dC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/simulation/modelsim
-vACC
-Z1 !s110 1687957613
-!i10b 1
-!s100 gYjaT?_bQG:n;^5dCEogz2
-IY5JK:]n>cL_T;4b<YSjZ31
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z3 w1687438704
-8C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/ACC/ACC.v
-FC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/ACC/ACC.v
-L0 1
-Z4 OV;L;10.5b;63
-r1
-!s85 0
-31
-Z5 !s108 1687957613.000000
-!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/ACC/ACC.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/ACC|C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/ACC/ACC.v|
-!i113 1
-Z6 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/ACC
-Z7 tCvgOpt 0
-=======
 Z0 dC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/simulation/modelsim
 vACC
-Z1 !s110 1687957856
+Z1 !s110 1687960164
 !i10b 1
 !s100 gYjaT?_bQG:n;^5dCEogz2
 IIWSnTImKH06jDTPFJ_O>Y3
@@ -48,35 +23,18 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1687957856.000000
+Z4 !s108 1687960164.000000
 !s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/ACC/ACC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/ACC|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/ACC/ACC.v|
 !i113 1
 Z5 o-vlog01compat -work work
 !s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/ACC
 Z6 tCvgOpt 0
->>>>>>> Stashed changes
 n@a@c@c
 vAdder
 R1
 !i10b 1
 !s100 `<IP[IFCJiH>=bWG[njFW2
-<<<<<<< Updated upstream
-ILj[@WX]W8GId9mQ9lNib@2
-R2
-R0
-R3
-8C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Adder/Adder.v
-FC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Adder/Adder.v
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Adder/Adder.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Adder|C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Adder/Adder.v|
-=======
 ISI;66lNZ:jB3BBZT8TnXn1
 R2
 R0
@@ -91,37 +49,15 @@ r1
 R4
 !s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Adder/Adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Adder|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Adder/Adder.v|
->>>>>>> Stashed changes
 !i113 1
 R5
 !s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Adder
 R6
-<<<<<<< Updated upstream
-!s92 -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Adder
-R7
-=======
->>>>>>> Stashed changes
 n@adder
 vCONTROL
-Z8 !s110 1687957612
+R1
 !i10b 1
 !s100 _5M[cCLXGbmaekSAJHZF@0
-<<<<<<< Updated upstream
-I@Bfa0BkKlh7?3O6bBCRBY1
-R2
-R0
-R3
-8C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/CONTROL/CONTROL.v
-FC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/CONTROL/CONTROL.v
-L0 1
-R4
-r1
-!s85 0
-31
-Z9 !s108 1687957612.000000
-!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/CONTROL/CONTROL.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/CONTROL|C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/CONTROL/CONTROL.v|
-=======
 Ie6ZPlLUV4zXnTc5M:f;P21
 R2
 R0
@@ -136,37 +72,13 @@ r1
 R4
 !s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/CONTROL/CONTROL.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/CONTROL|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/CONTROL/CONTROL.v|
->>>>>>> Stashed changes
 !i113 1
 R5
 !s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/CONTROL
 R6
-<<<<<<< Updated upstream
-!s92 -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/CONTROL
-R7
 n@c@o@n@t@r@o@l
 vCounter
-R8
-!i10b 1
-!s100 TC>o^V:f^ShM:0Q4g]k9K3
-IGbW16>K1]4XeMU[<k0^Q=3
-R2
-R0
-R3
-8C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Counter/Counter.v
-FC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Counter/Counter.v
-L0 1
-R4
-r1
-!s85 0
-31
-R9
-!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Counter/Counter.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Counter|C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Counter/Counter.v|
-=======
-n@c@o@n@t@r@o@l
-vCounter
-!s110 1687957855
+R1
 !i10b 1
 !s100 TC>o^V:f^ShM:0Q4g]k9K3
 IKb`iS[dG0a7NCXoMZOV_93
@@ -180,40 +92,18 @@ R3
 r1
 !s85 0
 31
-!s108 1687957855.000000
+R4
 !s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Counter/Counter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Counter|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Counter/Counter.v|
->>>>>>> Stashed changes
 !i113 1
 R5
 !s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Counter
 R6
-<<<<<<< Updated upstream
-!s92 -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Counter
-R7
-=======
->>>>>>> Stashed changes
 n@counter
 vMultiplicador
 R1
 !i10b 1
 !s100 H_ofhI0d]zCe9H;E81;:n3
-<<<<<<< Updated upstream
-I@=CC9PSQedUQ79jJ_VaD<3
-R2
-R0
-R3
-8C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador.v
-FC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador.v
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador|C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador.v|
-=======
 IZF6LRoCKzhPdQf9U9Bbh>1
 R2
 R0
@@ -228,46 +118,19 @@ r1
 R4
 !s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador.v|
->>>>>>> Stashed changes
 !i113 1
 R5
 Z7 !s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador
 R6
-<<<<<<< Updated upstream
-Z10 !s92 -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador
-R7
-=======
->>>>>>> Stashed changes
 n@multiplicador
 vMultiplicador_TB
 R1
 !i10b 1
-<<<<<<< Updated upstream
-!s100 6MS82J=LaYVmOUa1zblLG3
-I8_h3I?RM^F;o@KZ;hO@I;1
+!s100 R]cNed_<MzlD1cNK@[Y5W1
+Ih@<`4d<;:=kaXkg@z:;dz3
 R2
 R0
-w1687957163
-8C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v
-FC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v
-L0 3
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador|C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v|
-!i113 1
-R6
-R10
-R7
-=======
-!s100 bT=3cdXbn[UjJkCdDcHLg1
-IdkWkTzPjk];_@ElId8BMA0
-R2
-R0
-w1687957766
+w1687960155
 8C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_TB.v
 FC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_TB.v
 L0 3
@@ -282,5 +145,4 @@ R4
 R5
 R7
 R6
->>>>>>> Stashed changes
 n@multiplicador_@t@b
