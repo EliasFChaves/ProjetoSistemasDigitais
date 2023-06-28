@@ -1,0 +1,105 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/simulation/modelsim
+vhard_block
+<<<<<<< Updated upstream
+Z1 !s110 1687957260
+=======
+Z1 !s110 1687957797
+>>>>>>> Stashed changes
+!i10b 1
+!s100 lz5ifPXUD9V2>5[fa3OR13
+Ia2o:;2DAbHNAS<AINDE]D3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+<<<<<<< Updated upstream
+Z3 w1687957235
+=======
+Z3 w1687957416
+>>>>>>> Stashed changes
+Z4 8Multiplicador_min_1200mv_-40c_fast.vo
+Z5 FMultiplicador_min_1200mv_-40c_fast.vo
+L0 4375
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+<<<<<<< Updated upstream
+Z7 !s108 1687957260.000000
+=======
+Z7 !s108 1687957797.000000
+>>>>>>> Stashed changes
+Z8 !s107 Multiplicador_min_1200mv_-40c_fast.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Multiplicador_min_1200mv_-40c_fast.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vMultiplicador
+R1
+!i10b 1
+!s100 6dZE2Bh^iLAZ`d5^<PkYG3
+IDP5QFi7Pbl]TT9RHMMB3a1
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@multiplicador
+vMultiplicador_TB
+R1
+!i10b 1
+<<<<<<< Updated upstream
+!s100 6MS82J=LaYVmOUa1zblLG3
+I8_h3I?RM^F;o@KZ;hO@I;1
+R2
+R0
+w1687957163
+8C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v
+FC:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v
+=======
+!s100 bT=3cdXbn[UjJkCdDcHLg1
+IdkWkTzPjk];_@ElId8BMA0
+R2
+R0
+w1687957766
+8C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_TB.v
+FC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_TB.v
+>>>>>>> Stashed changes
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+<<<<<<< Updated upstream
+!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador|C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador/Multiplicador_TB.v|
+=======
+!s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/Multiplicador/Multiplicador_TB.v|
+>>>>>>> Stashed changes
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/Multiplicador
+R12
+n@multiplicador_@t@b
