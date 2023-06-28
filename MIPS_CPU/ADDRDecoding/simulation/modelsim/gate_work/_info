@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/simulation/modelsim
+vADDRDecoding
+Z1 !s110 1687962754
+!i10b 1
+!s100 _^^On4m=]T?S5VQk9ZOb:3
+I40@noaB3JP6AiCV6Qbc2e0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1687962428
+Z4 8ADDRDecoding_min_1200mv_-40c_fast.vo
+Z5 FADDRDecoding_min_1200mv_-40c_fast.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1687962754.000000
+Z8 !s107 ADDRDecoding_min_1200mv_-40c_fast.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|ADDRDecoding_min_1200mv_-40c_fast.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+n@a@d@d@r@decoding
+vADDRDecoding_TB
+R1
+!i10b 1
+!s100 OV^onRgMhI?VoLgjnihae2
+I<DNblXoiVMeV0G2Kd<U3F3
+R2
+R0
+w1687962373
+8C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v
+FC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding
+R12
+n@a@d@d@r@decoding_@t@b
+vhard_block
+R1
+!i10b 1
+!s100 c<=XSCJkDe5_l[SV4c5md2
+IHJ=fS=a89VN;bGmV=E1K@3
+R2
+R0
+R3
+R4
+R5
+L0 591
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

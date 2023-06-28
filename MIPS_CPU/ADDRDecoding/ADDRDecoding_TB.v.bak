@@ -1,0 +1,19 @@
+`timescale 1ns/100ps
+module ADDRDecoding_TB();
+
+	wire cs;
+	reg [31:0] addr;
+	integer i;
+	
+	ADDRDecoding DUT(
+		.cs(cs),
+		.addr(addr)
+	);
+	
+	initial
+	begin
+		for(i = 0; i <= 16'hFFFF; i = i + 1)
+		#20 addr = i;				
+	end
+	
+endmodule 

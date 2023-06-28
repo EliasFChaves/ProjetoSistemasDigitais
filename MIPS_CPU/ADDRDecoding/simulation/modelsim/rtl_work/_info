@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/simulation/modelsim
+vADDRDecoding
+Z1 !s110 1687963216
+!i10b 1
+!s100 3O:8EBV1P4B:E[=gSo;Xk1
+I_=Ehjljhn?0Q82]6[n[Wi2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1687962715
+8C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding.v
+FC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1687963215.000000
+!s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding
+Z6 tCvgOpt 0
+n@a@d@d@r@decoding
+vADDRDecoding_TB
+R1
+!i10b 1
+!s100 k>nLe=S7L=W:@AK55YN>W0
+I>_h;`H73k8Ic3>2nAY9l`0
+R2
+R0
+w1687963206
+8C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v
+FC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1687963216.000000
+!s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/ADDRDecoding/ADDRDecoding_TB.v|
+!i113 1
+R4
+R5
+R6
+n@a@d@d@r@decoding_@t@b
