@@ -1,31 +1,25 @@
 module registerfile (
-	input [31:0] dataIn,
-	input we,
-	input clk, rst,
-	input [4:0] rs,rt,rd,
-	output reg [31:0] A,B
-);
+	input Clk, Reset, we,
+	input [4:0] rs, rt, rd,
+	input [31:0] inBack,
+	output [31:0] outa, outb	
+);	
+	integer j;
+	reg [31:0] register [31:0];
+	
+	assign outa = register[rs];
+	assign outb = register[rt];
+	
+	always @ (posedge Clk, posedge Reset) begin 
+		
+		if (Reset)
+			for(j = 0; j <= 31; j = j+1) 
+				register[j] <= 32'h0;
+				
+		else if (we)
+				register[rd] <= inBack;
+	end 
+	
 
-	integer i;
-	
-	reg [31:0] register [0:15];
-	
-	always @ (negedge clk, posedge rst) 
-	begin
-	i = 0;
-		if(rst)
-			for(i = 0; i < 16; i = i+1) 
-			begin
-				register[i] = 32'b0;
-			end
-		else if (we) 
-			register[rd] <= dataIn;
-	end
-	
-	always @ (posedge clk) 
-	begin
-			A <= register[rs];
-			B <= register[rt];
-	end
 
 endmodule

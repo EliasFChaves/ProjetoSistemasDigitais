@@ -59,4 +59,9 @@ module Multiplicador_TB();
 		#10 clk = ~clk;
 	end
 
+	initial $init_signal_spy("/Multiplicador_TB/DUT/ws", "ws", 1);
+   initial $init_signal_spy("/Multiplicador_TB/DUT/wl", "wl", 1);
+   initial $init_signal_spy("/Multiplicador_TB/DUT/wsh", "wsh", 1);
+   initial $init_signal_spy("/Multiplicador_TB/DUT/wad", "wad", 1);
+   initial $init_signal_spy("/Multiplicador_TB/DUT/wk", "wk", 1);
 endmodule

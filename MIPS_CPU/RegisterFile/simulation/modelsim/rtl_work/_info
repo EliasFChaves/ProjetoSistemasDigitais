@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/simulation/modelsim
+vregisterfile
+Z1 !s110 1687956725
+!i10b 1
+!s100 6SWB`ie6o[6`<G]6042g=0
+Id:hVnA[76GGGQGJQP5g?^0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1687956376
+8C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile.v
+FC:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1687956724.000000
+!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile|C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile
+Z6 tCvgOpt 0
+vregisterfile_TB
+R1
+!i10b 1
+!s100 Eod;RnQGnRXV5ST`=g?WM2
+ImVdXI5CbV[6]?f[Tz3iEG3
+R2
+R0
+w1687956672
+8C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile_TB.v
+FC:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile_TB.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1687956725.000000
+!s107 C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile|C:/Quartus/MIPS_CPU/MIPS_CPU/RegisterFile/registerfile_TB.v|
+!i113 1
+R4
+R5
+R6
+nregisterfile_@t@b
