@@ -2,7 +2,7 @@
 module pc_TB();
 
 	reg Clk, Reset;
-	wire [9:0] address;
+	wire [31:0] address;
 
 	pc DUT(
 		.Clk(Clk),

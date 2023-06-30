@@ -1,13 +1,13 @@
 module pc(
 	input Clk, Reset, 
-	output [9:0] address
+	output [31:0] address
 );
-	reg [9:0]regpc = 10'b0;
+	reg [31:0]regpc = 32'h0500;
 	always@(posedge Clk or posedge Reset) begin 
 		if(Reset)
-			regpc <= 10'b0;
+			regpc <= 32'h0500;
 		else
-			regpc <= regpc + 10'b1;
+			regpc <= regpc + 32'h0001;
 	end
 
 	assign address = regpc;
