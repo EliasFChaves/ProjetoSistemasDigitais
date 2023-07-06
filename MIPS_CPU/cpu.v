@@ -90,16 +90,16 @@ module cpu(
 	
 	// Memória de instruções
 	instructionmemory inst_mem(
-		.Clk(CLK_SYS),
+		.clk(CLK_SYS),
 		.address(out_PC),
-		.out(out_inst_mem)
+		.dataOut(out_inst_mem)
 	);
 	
 	// Contador de programa
 	pc program_counter(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
-		.pc_address(out_PC)
+		.address(out_PC)
 	);
 
 	
@@ -115,14 +115,14 @@ module cpu(
 	// Register File
 	registerfile RF(
 		.Clk(CLK_SYS),
-		.rst(rst),
-		.write(ctrl3[7]),
-		.entrada(writeBack),
+		.Reset(rst),
+		.we(ctrl3[7]),
+		.inBack(writeBack),
 		.rs(ctrl0[22:18]),
 		.rd(ctrl3[12:8]),
 		.rt(ctrl0[17:13]),
-		.a(regFile1),
-		.b(regFile2)
+		.outa(regFile1),
+		.outb(regFile2)
 	);
 	
 	// Extend
@@ -133,28 +133,28 @@ module cpu(
 
 // Registros ID/EX
 	Register A(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(regFile1),
 		.out(regA)
 	);
 	 
 	Register B(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(regFile2),
 		.out(regB)
    );
 
 	Register #(23) CTRL1 (
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(ctrl0[22:0]),
 		.out(ctrl1[22:0])
 	);
 
 	Register IMM(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(ex_out),
 		.out(reg_imm_out)
@@ -200,14 +200,14 @@ module cpu(
 	
 // Registros EX/MEM
 	Register D1(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(mux2_out),
 		.out(reg_d1_out)
 	);
  
 	Register B2(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(regB),
 		.out(Data_BUS_WRITE)
@@ -215,7 +215,7 @@ module cpu(
 	
 
 	Register #(23) CTRL2(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(ctrl1[22:0]),
 		.out(ctrl2[22:0])
@@ -226,21 +226,21 @@ module cpu(
 	 
 	// Decodificador de endereços
 	ADDRDecoding ADD (
-		.address(reg_d1_out),
+		.addr(reg_d1_out),
 		.cs(CS)
 	);
 
 	// Memória de Dados
 	datamemory MEM_DADOS (
 		.Clk(CLK_SYS),
-		.rd_wr(ctrl2[1]),
-		.address(reg_d1_out[9:0]),
-		.in(Data_BUS_WRITE),
-		.out(dout)
+		.WR_RD(ctrl2[1]),
+		.ADDR(reg_d1_out[9:0]),
+		.din(Data_BUS_WRITE),
+		.dout(dout)
 	);
 	
 	Register #(1)ATRASO (
-		.rst(rst), 
+		.Reset(rst), 
 		.Clk(CLK_SYS), 
 		.in(CS), 
 		.out(atraso_out)
@@ -256,14 +256,14 @@ module cpu(
 	
 // Registros MEM/WB
 	Register D2(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(reg_d1_out),
 		.out(reg_d2_out)
 	);
 
 	Register #(23) CTRL3(
-		.rst(rst),
+		.Reset(rst),
 		.Clk(CLK_SYS),
 		.in(ctrl2[22:0]),
 		.out(ctrl3[22:0])
