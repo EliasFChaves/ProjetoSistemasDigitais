@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/InstructionMemory/simulation/modelsim
+vhard_block
+Z1 !s110 1688655253
+!i10b 1
+!s100 ?C2[n?ZmMi1=H1gcKA@8a2
+I223hlM4@HN35>AU=meQhd0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1688655130
+Z4 8instructionmemory_min_1200mv_-40c_fast.vo
+Z5 Finstructionmemory_min_1200mv_-40c_fast.vo
+L0 1052
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1688655253.000000
+Z8 !s107 instructionmemory_min_1200mv_-40c_fast.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|instructionmemory_min_1200mv_-40c_fast.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vinstructionmemory
+R1
+!i10b 1
+!s100 9zIf0B@3X?H4@l`;;0jfJ0
+IQ7kHhG^XOFa]dWOa`cXh92
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vinstructionmemory_TB
+R1
+!i10b 1
+!s100 @XBIdA^cGhgW9K17n^2PC2
+InDS@OP0aMI0P=_1n@2CB?0
+R2
+R0
+w1688655231
+8C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/InstructionMemory/instructionmemory_TB.v
+FC:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/InstructionMemory/instructionmemory_TB.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/InstructionMemory/instructionmemory_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/InstructionMemory|C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/InstructionMemory/instructionmemory_TB.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/elias/Documents/GitHub/ProjetoSistemasDigitais/MIPS_CPU/InstructionMemory
+R12
+ninstructionmemory_@t@b
