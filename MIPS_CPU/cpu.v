@@ -253,7 +253,7 @@ module cpu(
 	mux MUX3(
 		.data1(dout),
 		.data2(Data_BUS_READ),
-		.sel(~atraso_out),
+		.sel(atraso_out),
 		.out(M)
 	);
 	
