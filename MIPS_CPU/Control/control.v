@@ -1,0 +1,114 @@
+module control(
+	input [31:0] in,
+	output [22:0] out
+);	
+	reg [5:0] operationeration_code, operation;
+	reg [4:0] rs, rt, rd;
+	
+	reg [1:0] ALU_select;
+	reg mul_Start;
+	reg mux1_ALU;
+	reg mux2_ALU;
+	reg WR_mem;
+	reg WB_mux_sel;
+	reg WR_regfile;
+	
+	assign out = {rs, rt, rd, WR_regfile, mux1_ALU, ALU_select, mul_Start,  mux2_ALU, WR_mem, WB_mux_sel};
+
+	always @ (in) 
+	begin
+		operationeration_code = in[31:26];
+		operation = in[5:0];
+		rs = in[25:21];
+		rt = in[20:16];
+		case(operationeration_code)
+			5'h05: 					
+			begin
+				ALU_select = 2'b00;   
+				rd = rt;           	
+				WR_regfile = 1;				 
+				WR_mem = 0;   		 			
+				mux1_ALU = 1;		 	
+				mux2_ALU = 1;		 	
+				mul_Start = 0; 		 	
+				WB_mux_sel = 1;		
+			end
+			
+			5'h06: 				 	
+			begin
+				ALU_select = 2'b00;	
+				rd = rt;       	
+				WR_regfile = 0;			
+				WR_mem = 1;			
+				mux1_ALU = 1;		
+				mux2_ALU = 1;		
+				mul_Start = 0;			
+				WB_mux_sel = 1;	
+			end
+			
+			5'h04: 					
+			begin  
+				rd = in[15:11]; 	
+				WR_regfile = 1; 			
+				mux1_ALU = 0;     
+				mul_Start = 0;			
+				WB_mux_sel = 0;	
+				WR_mem = 0;			
+				
+				case(operation)
+					6'h20:  			
+					begin 
+						ALU_select = 2'b00; //Soma
+						mux2_ALU = 1;   	
+					end
+					
+					6'h22: 			
+					begin
+						ALU_select = 2'b01; //Subtração	
+						mux2_ALU = 1;		
+					end
+					
+					6'h32: 			
+					begin
+						ALU_select = 2'b0; //Soma
+						mul_Start = 1;		 //Seleciona multiplicador como saída	
+						mux2_ALU = 0;  //Não seleciona a saída da ALU
+					end
+					
+					6'h24:
+					begin
+						ALU_select = 2'b10; //And	
+						mux2_ALU = 1; 		//Seleciona saída ALU
+					end
+					
+					6'h25:
+					begin
+						ALU_select = 2'b11;	//Or
+						mux2_ALU = 1; 		//Seleciona saída ALU
+					end
+					
+					default:
+					begin
+						ALU_select = 2'b10; //And
+						mux2_ALU = 1; //Seleciona saída ALU
+					end
+					
+				endcase
+			end
+			
+			default: 
+			begin
+				rd = 5'h1F;
+				WR_regfile = 0;
+				mux1_ALU = 0;
+				ALU_select = 0;
+				mul_Start = 0;
+				mux2_ALU = 1;
+				WR_mem = 0;
+				WB_mux_sel = 0;				
+			end
+			
+		endcase
+	end
+
+endmodule 
