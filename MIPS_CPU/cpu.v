@@ -57,6 +57,7 @@ module cpu(
 	output [31:0] ADDR, Data_BUS_WRITE,
 	output CS, WR_RD
 );
+	(*keep=1*)wire [31:0] addressCorrection_mem1, addressCorrection_mem2;
 	(*keep=1*)wire [31:0] out_inst_mem;
 	(*keep=1*)wire [9:0] out_PC;
 	(*keep=1*)wire CLK_MUL, CLK_SYS;
@@ -85,13 +86,15 @@ module cpu(
 	
 	assign ADDR = reg_d1_out;
 	assign WR_RD = ctrl2[1];
+	assign addressCorrection_mem1 = out_PC - 32'h0500;
+	assign addressCorrection_mem2 = reg_d1_out - 32'h0C00;
 	
 //1º Estágio
 	
 	// Memória de instruções
 	instructionmemory inst_mem(
 		.clk(CLK_SYS),
-		.address(out_PC),
+		.address(addressCorrection_mem1[9:0]),
 		.dataOut(out_inst_mem)
 	);
 	
@@ -234,7 +237,7 @@ module cpu(
 	datamemory MEM_DADOS (
 		.Clk(CLK_SYS),
 		.WR_RD(ctrl2[1]),
-		.ADDR(reg_d1_out[9:0]),
+		.ADDR(addressCorrection_mem2[9:0]),
 		.din(Data_BUS_WRITE),
 		.dout(dout)
 	);
