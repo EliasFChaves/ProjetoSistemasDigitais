@@ -72,8 +72,9 @@ module cpu(
 	(*keep=1*)wire [31:0] out_MULT;	
 	(*keep=1*)wire [31:0] mux2_out;		
  	(*keep=1*)wire [31:0] reg_d1_out;		 
-	(*keep=1*)wire [31:0] dout;	
-	(*keep=1*)wire [31:0] M;
+	(*keep=1*)wire [31:0] dout;
+	(*keep=1*)wire [31:0] dataOutM;	
+	(*keep=1*)wire [31:0] dataOutM;
 	(*keep=1*)wire [31:0] reg_d2_out;
 	(*keep=1*)wire atraso_out;
 
@@ -242,19 +243,27 @@ module cpu(
 		.dout(dout)
 	);
 	
-	Register #(1)ATRASO (
-		.Reset(rst), 
-		.Clk(CLK_SYS), 
-		.in(CS), 
-		.out(atraso_out)
-	);
+	//Register #(1)ATRASO (
+		//.Reset(rst), 
+		//.Clk(CLK_SYS), 
+		//.in(CS), 
+		//.out(atraso_out)
+	//);
+	
 	
 	// Mux depois da memória
 	mux MUX3(
 		.data1(dout),
 		.data2(Data_BUS_READ),
-		.sel(atraso_out),
-		.out(M)
+		.sel(CS),
+		.out(dataInM)
+	);
+	
+	Register M (
+		.Reset(rst),
+		.Clk(CLK_SYS),
+		.in(dataInM),
+		.out(dataOutM)
 	);
 	
 // Registros MEM/WB
@@ -275,7 +284,7 @@ module cpu(
 // 5º estágio 
 	mux MUX4(
 		.data1(reg_d2_out),
-		.data2(M),
+		.data2(dataOutM),
 		.sel(ctrl3[0]),
 		.out(writeBack)
 	);
