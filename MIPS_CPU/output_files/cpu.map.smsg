@@ -1,3 +1,3 @@
-Info (10281): Verilog HDL Declaration information at cpu.v(63): object "ctrl1" differs only in case from object "CTRL1" in the same scope File: C:/Quartus/MIPS_CPU/MIPS_CPU/cpu.v Line: 63
-Info (10281): Verilog HDL Declaration information at cpu.v(63): object "ctrl2" differs only in case from object "CTRL2" in the same scope File: C:/Quartus/MIPS_CPU/MIPS_CPU/cpu.v Line: 63
-Info (10281): Verilog HDL Declaration information at cpu.v(63): object "ctrl3" differs only in case from object "CTRL3" in the same scope File: C:/Quartus/MIPS_CPU/MIPS_CPU/cpu.v Line: 63
+Info (10281): Verilog HDL Declaration information at cpu.v(64): object "ctrl1" differs only in case from object "CTRL1" in the same scope File: C:/Quartus/MIPS_CPU/MIPS_CPU/cpu.v Line: 64
+Info (10281): Verilog HDL Declaration information at cpu.v(64): object "ctrl2" differs only in case from object "CTRL2" in the same scope File: C:/Quartus/MIPS_CPU/MIPS_CPU/cpu.v Line: 64
+Info (10281): Verilog HDL Declaration information at cpu.v(64): object "ctrl3" differs only in case from object "CTRL3" in the same scope File: C:/Quartus/MIPS_CPU/MIPS_CPU/cpu.v Line: 64

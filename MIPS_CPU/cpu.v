@@ -1,12 +1,12 @@
 /* 
-	Grupo 9
-	Cesar Augusto Santos Ferreira - 2017012332
-	Rafael Rocha Maciel - 2018005619
-	Renato Masteguim Neto - 2020001250
+		Grupo 4:
+			Elias Figueiredo Chaves - 
+			Luiz Guilherme de Godoy Gerulaitis - 2020011186
+			Othon Augusto Lucena - 
 			
 		a) Qual a latência do sistema?
 			Resposta: 
-			5 pulsos de clock
+			A latência é de 5 pulsos de clock, devido ao pipeline ser de 5 estágios.
 			
 		b) Qual o throughput do sistema?
 			Resposta: 
@@ -73,10 +73,9 @@ module cpu(
 	(*keep=1*)wire [31:0] mux2_out;		
  	(*keep=1*)wire [31:0] reg_d1_out;		 
 	(*keep=1*)wire [31:0] dout;
-	(*keep=1*)wire [31:0] dataOutM;	
-	(*keep=1*)wire [31:0] dataOutM;
+	(*keep=1*)wire [31:0] dataOutMUX3;	
 	(*keep=1*)wire [31:0] reg_d2_out;
-	(*keep=1*)wire atraso_out;
+	(*keep=1*)wire dataOutM;
 
 	pll	pll_inst (
 	.areset (rst),
@@ -255,14 +254,14 @@ module cpu(
 	mux MUX3(
 		.data1(dout),
 		.data2(Data_BUS_READ),
-		.sel(CS),
-		.out(dataInM)
+		.sel(dataOutM),
+		.out(dataOutMUX3)
 	);
 	
-	Register M (
+	Register #(1)RegM (
 		.Reset(rst),
 		.Clk(CLK_SYS),
-		.in(dataInM),
+		.in(CS),
 		.out(dataOutM)
 	);
 	
@@ -284,7 +283,7 @@ module cpu(
 // 5º estágio 
 	mux MUX4(
 		.data1(reg_d2_out),
-		.data2(dataOutM),
+		.data2(dataOutMUX3),
 		.sel(ctrl3[0]),
 		.out(writeBack)
 	);

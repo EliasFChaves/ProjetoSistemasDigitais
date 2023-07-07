@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Jul 06 17:51:56 2023
+Analysis & Synthesis Status : Successful - Fri Jul 07 16:09:46 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : cpu
 Top-level Entity Name : cpu
 Family : Cyclone IV GX
-Total logic elements : 3,114
-    Total combinational functions : 2,121
+Total logic elements : 3,134
+    Total combinational functions : 2,141
     Dedicated logic registers : 1,325
 Total registers : 1325
 Total pins : 100
