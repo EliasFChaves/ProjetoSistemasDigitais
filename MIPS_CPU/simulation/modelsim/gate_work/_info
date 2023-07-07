@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Quartus/MIPS_CPU/MIPS_CPU/simulation/modelsim
 vcpu
-Z1 !s110 1688757090
+Z1 !s110 1688759591
 !i10b 1
 !s100 nfJ0Sm4CGZB;gP<]2VXN:3
 IShaI_dl>ff<]R]KW_`oCN2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1688757060
+w1688758805
 8cpu_min_1200mv_-40c_fast.vo
 Fcpu_min_1200mv_-40c_fast.vo
 L0 31
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1688757089.000000
+!s108 1688759590.000000
 !s107 cpu_min_1200mv_-40c_fast.vo|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|cpu_min_1200mv_-40c_fast.vo|
 !i113 1
@@ -45,7 +45,7 @@ R3
 r1
 !s85 0
 31
-!s108 1688757090.000000
+!s108 1688759591.000000
 !s107 C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU|C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v|
 !i113 1
