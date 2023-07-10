@@ -13,29 +13,29 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {cpu_min_1200mv_-40c_fast.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:30:04 on Jul 10,2023
+# Start time: 16:54:02 on Jul 10,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." cpu_min_1200mv_-40c_fast.vo 
 # -- Compiling module cpu
 # 
 # Top level modules:
 # 	cpu
-# End time: 11:30:05 on Jul 10,2023, Elapsed time: 0:00:01
+# End time: 16:54:02 on Jul 10,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Quartus/MIPS_CPU/MIPS_CPU {C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:30:05 on Jul 10,2023
+# Start time: 16:54:02 on Jul 10,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Quartus/MIPS_CPU/MIPS_CPU" C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v 
 # -- Compiling module TB
 # 
 # Top level modules:
 # 	TB
-# End time: 11:30:05 on Jul 10,2023, Elapsed time: 0:00:00
+# End time: 16:54:02 on Jul 10,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs="+acc"  TB
 # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs=""+acc"" TB 
-# Start time: 11:30:05 on Jul 10,2023
+# Start time: 16:54:02 on Jul 10,2023
 # Loading work.TB
 # Loading work.cpu
 # Loading cycloneiv_ver.cycloneiv_io_obuf
@@ -69,17 +69,17 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: init_signal_spy [C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v(15)] : Mirroring the value of '/TB/DUT/CLK_SYS' onto '/TB/CLK_SYS'.
-# ** Note: init_signal_spy [C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v(16)] : Mirroring the value of '/TB/DUT/CLK_MUL' onto '/TB/CLK_MUL'.
+# ** Note: init_signal_spy [C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v(15)] : Mirroring the value of '/TB/DUT/Clk_System' onto '/TB/Clk_System'.
+# ** Note: init_signal_spy [C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v(16)] : Mirroring the value of '/TB/DUT/Clk_Mult' onto '/TB/Clk_Mult'.
 # ** Note: init_signal_spy [C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v(17)] : Mirroring the value of '/TB/DUT/writeBack' onto '/TB/writeBack'.
 #  Note : cycloneiv PLL locked to incoming clock
-# Time: 23533  Instance: TB.DUT.\pll_inst|altpll_component|auto_generated|pll1 
+# Time: 23533  Instance: TB.DUT.\PLL|altpll_component|auto_generated|pll1 
 #  Note : cycloneiv PLL was reset
-# Time: 101594  Instance: TB.DUT.\pll_inst|altpll_component|auto_generated|pll1 
+# Time: 101594  Instance: TB.DUT.\PLL|altpll_component|auto_generated|pll1 
 #  Note : cycloneiv PLL locked to incoming clock
-# Time: 316993  Instance: TB.DUT.\pll_inst|altpll_component|auto_generated|pll1 
+# Time: 316993  Instance: TB.DUT.\PLL|altpll_component|auto_generated|pll1 
 # ** Note: $stop    : C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v(26)
 #    Time: 3800 ns  Iteration: 0  Instance: /TB
 # Break in Module TB at C:/Quartus/MIPS_CPU/MIPS_CPU/TB.v line 26
-# End time: 11:31:49 on Jul 10,2023, Elapsed time: 0:01:44
+# End time: 16:57:19 on Jul 10,2023, Elapsed time: 0:03:17
 # Errors: 0, Warnings: 1

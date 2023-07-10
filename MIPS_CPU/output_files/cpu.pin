@@ -892,7 +892,7 @@ GND                          : V8        : gnd    :                   :         
 VCCINT                       : V9        : power  :                   : 1.2V    :           :                
 GND                          : V10       : gnd    :                   :         :           :                
 GXB_GND*                     : V11       :        :                   :         : 3B        :                
-CLK                          : V12       : input  : 2.5 V             :         : 3B        : N              
+Clk                          : V12       : input  : 2.5 V             :         : 3B        : N              
 VCCINT                       : V13       : power  :                   : 1.2V    :           :                
 GND                          : V14       : gnd    :                   :         :           :                
 GXB_GND*                     : V15       :        :                   :         : 3A        :                
@@ -925,7 +925,7 @@ GXB_GND*                     : W11       :        :                   :         
 GXB_GND*                     : W12       :        :                   :         : 3B        :                
 GND                          : W13       : gnd    :                   :         :           :                
 VCCINT                       : W14       : power  :                   : 1.2V    :           :                
-rst                          : W15       : input  : 2.5 V             :         : 3A        : N              
+Reset                        : W15       : input  : 2.5 V             :         : 3A        : N              
 VCC_CLKIN3A                  : W16       : power  :                   : 2.5V    : 3A        :                
 GND                          : W17       : gnd    :                   :         :           :                
 VCCINT                       : W18       : power  :                   : 1.2V    :           :                

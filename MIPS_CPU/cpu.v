@@ -1,5 +1,5 @@
 /* 
-MIPS_CPU - ELTD05/ELTD15
+      MIPS_CPU - ELTD05/ELTD15
 
 		Grupo 4:
 			Elias Figueiredo Chaves - 2021004408
@@ -24,262 +24,244 @@ MIPS_CPU - ELTD05/ELTD15
 			
 		d) Qual a máxima frequência de operação do sistema? (Indique a FPGA utilizada)
 			Resposta: 
-			FPGA utilizada foi: Cyclone IV GX: EP4CGX150DF31I7AD
-			Como a multiplicação leva 34 pulsos de clock para ser realizada, a frequência do sistema tem que ser 34 vezes menor 
-			do que a do multiplicador. Desse modo as frequências ficaram as seguintes:
-			Para o Multiplicador foi de 248.32 MHz
-			Para o Sistema foi 7.3035 MHz
+			FPGA utilizada foi: Cyclone IV GX: EP4CGX150DF31I7AD.
+			Para o Multiplicador, a frequência de operação foi de 248.32 MHz.
+			Para o Sistema, a frequência de operação foi de 7.3035 MHz.
+			A frequência do sistema assume esse valor, pois como o multiplicadorleva 34 pulsos de clock de para realizar a sua operação, 
+			a frequência do sistema deve ser divida por 34.
 			
 		e) Com a arquitetura implementada, a expressão (A*B) – (C+D) é executada corretamente (se executada em sequência ininterrupta)? Por quê? 
 			O que pode ser feito para que a expressão seja calculada corretamente?
 			Resposta: 
-			Não, visto que acontece "pipeline hazard", onde o resultado de uma instrução ainda não está no registrador de destino 
-			e a instrução seguinte tenta acessá-la. Uma maneira de resolver esse problema é inserir 3 bolhas na pipeline depois das instruções de load.
+			Devido à ocorrência de "pipeline hazard", em que o resultado de uma instrução ainda não está disponível no registrador de 
+			destino e a instrução seguinte tenta acessá-lo, é necessário adotar medidas para resolver esse problema. Uma solução viável
+			seria a inserção de três ciclos de espera (bolhas) na pipeline após as instruções de load.
 			
 		f) Analisando a sua implementação de dois domínios de clock diferentes, haverá problemas com metaestabilidade? Por que?
 			Resposta: 
-			Não, visto que o clock do sistema é um multiplo inteiro do clock do multiplicador e a PLL mantém a fase sincronizada.
+			Não, pois o clock do sistema é um múltiplo inteiro do clock do multiplicador e a PLL (Phase-Locked Loop) mantém a fase sincronizada.
 		
 		g) A aplicação de um multiplicador do tipo utilizado, no sistema MIPS sugerido, é eficiente em termos de velocidade? Por que?
 			Resposta: 
-			Não, visto que essa implementação de multiplicador utilizada possui pipeline enrolada, 
-			desse modo não tendo paralelismo e demorando vários ciclos (34 neste caso) para realizar a sua execução.
+			Não, porque a implementação do multiplicador utilizada possui uma estrutura de pipeline enrolada, o que significa que não há paralelismo 
+			e leva vários ciclos para concluir a sua execução, nesse caso leva 34 ciclos.
 		
 		h) Cite modificações cabíveis na arquitetura do sistema que tornaria o sistema mais rápido (frequência deoperação maior). 
+		   Para cada modificação sugerida, qual a nova latência e throughput do sistema?
 			Resposta: 
-			Para cada modificação sugerida, qual a nova latência e throughput do sistema?
-			Substituir a implementação do multiplicador por um mais condizente com essa implementação do MIPS. por exemplo, 
-			o próprio multiplicador da FPGA. Desse modo, o sistema poderia operar em uma frequência maior, 
-			e precisaria de apenas um Clock para todo o sistema. A latência e o throughput seriam mantidos.
+			Uma alternativa viável seria substituir a implementação atual do multiplicador por uma mais adequada para o sistema MIPS em questão, 
+			como o multiplicador disponível na FPGA. Essa mudança permitiria ao sistema operar em uma frequência mais alta, eliminando a necessidade de múltiplos clocks. 
+			Assim, a latência e o throughput seriam mantidos, resultando em um desempenho otimizado.
 
-	*/
+*/
 
 module cpu(
-	input CLK, rst,
+	input Clk, Reset,
 	input [31:0] Data_BUS_READ,
 	output [31:0] ADDR, Data_BUS_WRITE,
 	output CS, WR_RD
 );
 	(*keep=1*)wire [31:0] addressCorrection_mem1, addressCorrection_mem2;
-	(*keep=1*)wire [31:0] out_inst_mem;
-	(*keep=1*)wire [9:0] out_PC;
-	(*keep=1*)wire CLK_MUL, CLK_SYS;
+	(*keep=1*)wire [31:0] dataOut_Instruct_Mem;
+	(*keep=1*)wire [9:0] dataOut_PC;
+	(*keep=1*)wire Clk_Mult, Clk_System;
 	(*keep=1*)wire [22:0] ctrl0, ctrl1, ctrl2, ctrl3;
-	(*keep=1*)wire [31:0] regFile1, regFile2;
+	(*keep=1*)wire [31:0] dataOut_RegFile_1, dataOut_RegFile_2;
 	(*keep=1*)wire [31:0] writeBack;	
-	(*keep=1*)wire [31:0] regA,regB;	
-	(*keep=1*)wire [31:0] ex_out;
-	(*keep=1*)wire [31:0] reg_imm_out;	
-	(*keep=1*)wire [31:0] mux1_out;	
-	(*keep=1*)wire [31:0] out_ALU;	 
-	(*keep=1*)wire [31:0] out_MULT;	
-	(*keep=1*)wire [31:0] mux2_out;		
- 	(*keep=1*)wire [31:0] reg_d1_out;		 
+	(*keep=1*)wire [31:0] register_A,register_B;	
+	(*keep=1*)wire [31:0] dataOut_Extend;
+	(*keep=1*)wire [31:0] dataOut_Imm;	
+	(*keep=1*)wire [31:0] dataOut_Mux1;	
+	(*keep=1*)wire [31:0] dataOut_ALU;	 
+	(*keep=1*)wire [31:0] dataOut_Mult;	
+	(*keep=1*)wire [31:0] dataOut_Mux2;		
+ 	(*keep=1*)wire [31:0] dataOut_D1;		 
 	(*keep=1*)wire [31:0] dout;
-	(*keep=1*)wire [31:0] dataOutMUX3;	
-	(*keep=1*)wire [31:0] reg_d2_out;
-	(*keep=1*)wire dataOutM;
+	(*keep=1*)wire [31:0] dataOut_Mux3;	
+	(*keep=1*)wire [31:0] dataOut_D2;
+	(*keep=1*)wire dataOut_M;
 
-	pll	pll_inst (
-		.areset (rst),
-		.inclk0 (CLK),
-		.c0 (CLK_MUL),
-		.c1 (CLK_SYS),
+	pll	PLL (
+		.areset (Reset),
+		.inclk0 (Clk),
+		.c0 (Clk_Mult),
+		.c1 (Clk_System),
 	);	
 	
-	assign ADDR = reg_d1_out;
+	assign ADDR = dataOut_D1;
 	assign WR_RD = ctrl2[1];
-	assign addressCorrection_mem1 = out_PC - 32'h0500;
-	assign addressCorrection_mem2 = reg_d1_out - 32'h0C00;
+	assign addressCorrection_mem1 = dataOut_PC - 32'h0500;
+	assign addressCorrection_mem2 = dataOut_D1 - 32'h0C00;
 	
-//1º Estágio
-	
-	// Memória de instruções
-	instructionmemory inst_mem(
-		.clk(CLK_SYS),
-		.address(addressCorrection_mem1[9:0]),
-		.dataOut(out_inst_mem)
-	);
-	
-	// Contador de programa
-	pc program_counter(
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.address(out_PC)
-	);
+//Instruction Fetch - 1º Estágio
 
+	pc PC(
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.address(dataOut_PC)
+	);
+	
+	instructionmemory Intruction_Memory(
+		.clk(Clk_System),
+		.address(addressCorrection_mem1[9:0]),
+		.dataOut(dataOut_Instruct_Mem)
+	);
 	
 	
-// 2º Estágio
+//Instruction Decode - 2º Estágio
 	
-	// Unidade de controle
-	control CONTROL(
-		.in(out_inst_mem),
+	control Control(
+		.in(dataOut_Instruct_Mem),
 		.out(ctrl0)
 	);
 	 
-	// Register File
-	registerfile RF(
-		.Clk(CLK_SYS),
-		.Reset(rst),
+	registerfile Register_File(
+		.Clk(Clk_System),
+		.Reset(Reset),
 		.we(ctrl3[7]),
 		.inBack(writeBack),
 		.rs(ctrl0[22:18]),
 		.rd(ctrl3[12:8]),
 		.rt(ctrl0[17:13]),
-		.outa(regFile1),
-		.outb(regFile2)
+		.outa(dataOut_RegFile_1),
+		.outb(dataOut_RegFile_2)
 	);
 	
-	// Extend
-	extend EX(
-		.in(out_inst_mem),
-		.out(ex_out)
+	extend Extend(
+		.in(dataOut_Instruct_Mem),
+		.out(dataOut_Extend)
 	);
 
-// Registros ID/EX
 	Register A(
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.in(regFile1),
-		.out(regA)
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.in(dataOut_RegFile_1),
+		.out(register_A)
 	);
 	 
 	Register B(
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.in(regFile2),
-		.out(regB)
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.in(dataOut_RegFile_2),
+		.out(register_B)
    );
 
 	Register #(23) CTRL1 (
-		.Reset(rst),
-		.Clk(CLK_SYS),
+		.Reset(Reset),
+		.Clk(Clk_System),
 		.in(ctrl0[22:0]),
 		.out(ctrl1[22:0])
 	);
 
 	Register IMM(
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.in(ex_out),
-		.out(reg_imm_out)
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.in(dataOut_Extend),
+		.out(dataOut_Imm)
 	);
 	 
 	 
 	 
-// 3º Estágio
+//Execute - 3º Estágio
 	
-	// Mux antes da ALU
 	mux MUX1(
-		.data1(regB),
-		.data2(reg_imm_out),
+		.data1(register_B),
+		.data2(dataOut_Imm),
 		.sel(ctrl1[6]),
-		.out(mux1_out)
+		.out(dataOut_Mux1)
 	);
 	  
-	// ALU
 	alu ALU(
-		.a(regA),
-		.b(mux1_out),
+		.a(register_A),
+		.b(dataOut_Mux1),
 		.sel(ctrl1[5:4]),
-		.out(out_ALU)
+		.out(dataOut_ALU)
 	);
 	  
-	// Multiplicador
-	Multiplicador MULT(
-		.Clk(CLK_MUL),
-		.Multiplicador(regA[15:0]),
-		.Multiplicando(regB[15:0]),
+	Multiplicador MULTIPLICADOR(
+		.Clk(Clk_Mult),
+		.Multiplicador(register_A[15:0]),
+		.Multiplicando(register_B[15:0]),
 		.St(ctrl1[3]),
-		.Produto(out_MULT)
+		.Produto(dataOut_Mult)
 	);
 
-	// Mux depois da ALU
 	mux MUX2(
-		.data1(out_MULT),
-		.data2(out_ALU),
+		.data1(dataOut_Mult),
+		.data2(dataOut_ALU),
 		.sel(ctrl1[2]),
-		.out(mux2_out)
+		.out(dataOut_Mux2)
 	);
 	
-	
-// Registros EX/MEM
 	Register D1(
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.in(mux2_out),
-		.out(reg_d1_out)
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.in(dataOut_Mux2),
+		.out(dataOut_D1)
 	);
  
 	Register B2(
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.in(regB),
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.in(register_B),
 		.out(Data_BUS_WRITE)
 	);
 	
-
 	Register #(23) CTRL2(
-		.Reset(rst),
-		.Clk(CLK_SYS),
+		.Reset(Reset),
+		.Clk(Clk_System),
 		.in(ctrl1[22:0]),
 		.out(ctrl2[22:0])
 	);	 
 
 	
-// 4º Estágio
+//Memory - 4º Estágio
 	 
-	// Decodificador de endereços
-	ADDRDecoding ADD (
-		.addr(reg_d1_out),
+	ADDRDecoding ADDR_Decoding (
+		.addr(dataOut_D1),
 		.cs(CS)
 	);
 
-	// Memória de Dados
-	datamemory MEM_DADOS (
-		.Clk(CLK_SYS),
+	datamemory Data_Memory (
+		.Clk(Clk_System),
 		.WR_RD(ctrl2[1]),
 		.ADDR(addressCorrection_mem2[9:0]),
 		.din(Data_BUS_WRITE),
 		.dout(dout)
 	);
 	
+	Register #(1) M (
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.in(CS),
+		.out(dataOut_M)
+	);
 	
-	// Mux depois da memória
 	mux MUX3(
 		.data1(dout),
 		.data2(Data_BUS_READ),
-		.sel(dataOutM),
-		.out(dataOutMUX3)
+		.sel(dataOut_M),
+		.out(dataOut_Mux3)
 	);
 	
-	Register #(1)RegM (
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.in(CS),
-		.out(dataOutM)
-	);
-	
-// Registros MEM/WB
 	Register D2(
-		.Reset(rst),
-		.Clk(CLK_SYS),
-		.in(reg_d1_out),
-		.out(reg_d2_out)
+		.Reset(Reset),
+		.Clk(Clk_System),
+		.in(dataOut_D1),
+		.out(dataOut_D2)
 	);
 
 	Register #(23) CTRL3(
-		.Reset(rst),
-		.Clk(CLK_SYS),
+		.Reset(Reset),
+		.Clk(Clk_System),
 		.in(ctrl2[22:0]),
 		.out(ctrl3[22:0])
 	);
 
-// 5º estágio 
+//Write Back - 5º estágio 
 	mux MUX4(
-		.data1(reg_d2_out),
-		.data2(dataOutMUX3),
+		.data1(dataOut_D2),
+		.data2(dataOut_Mux3),
 		.sel(ctrl3[0]),
 		.out(writeBack)
 	);

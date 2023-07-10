@@ -1,6 +1,6 @@
 |cpu
-CLK => CLK.IN1
-rst => rst.IN13
+Clk => Clk.IN1
+Reset => Reset.IN13
 Data_BUS_READ[0] => Data_BUS_READ[0].IN1
 Data_BUS_READ[1] => Data_BUS_READ[1].IN1
 Data_BUS_READ[2] => Data_BUS_READ[2].IN1
@@ -101,7 +101,7 @@ CS <= CS.DB_MAX_OUTPUT_PORT_TYPE
 WR_RD <= WR_RD.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|pll:pll_inst
+|cpu|pll:PLL
 areset => areset.IN1
 inclk0 => sub_wire1[0].IN1
 c0 <= altpll:altpll_component.clk
@@ -109,7 +109,7 @@ c1 <= altpll:altpll_component.clk
 locked <= altpll:altpll_component.locked
 
 
-|cpu|pll:pll_inst|altpll:altpll_component
+|cpu|pll:PLL|altpll:altpll_component
 inclk[0] => pll_altpll:auto_generated.inclk[0]
 inclk[1] => pll_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
@@ -169,7 +169,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|cpu|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated
+|cpu|pll:PLL|altpll:altpll_component|pll_altpll:auto_generated
 areset => pll1.ARESET
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
@@ -181,84 +181,7 @@ inclk[1] => pll1.CLK1
 locked <= pll1.LOCKED
 
 
-|cpu|instructionmemory:inst_mem
-address[0] => memoria.RADDR
-address[1] => memoria.RADDR1
-address[2] => memoria.RADDR2
-address[3] => memoria.RADDR3
-address[4] => memoria.RADDR4
-address[5] => memoria.RADDR5
-address[6] => memoria.RADDR6
-address[7] => memoria.RADDR7
-address[8] => memoria.RADDR8
-address[9] => memoria.RADDR9
-clk => dataOut[0]~reg0.CLK
-clk => dataOut[1]~reg0.CLK
-clk => dataOut[2]~reg0.CLK
-clk => dataOut[3]~reg0.CLK
-clk => dataOut[4]~reg0.CLK
-clk => dataOut[5]~reg0.CLK
-clk => dataOut[6]~reg0.CLK
-clk => dataOut[7]~reg0.CLK
-clk => dataOut[8]~reg0.CLK
-clk => dataOut[9]~reg0.CLK
-clk => dataOut[10]~reg0.CLK
-clk => dataOut[11]~reg0.CLK
-clk => dataOut[12]~reg0.CLK
-clk => dataOut[13]~reg0.CLK
-clk => dataOut[14]~reg0.CLK
-clk => dataOut[15]~reg0.CLK
-clk => dataOut[16]~reg0.CLK
-clk => dataOut[17]~reg0.CLK
-clk => dataOut[18]~reg0.CLK
-clk => dataOut[19]~reg0.CLK
-clk => dataOut[20]~reg0.CLK
-clk => dataOut[21]~reg0.CLK
-clk => dataOut[22]~reg0.CLK
-clk => dataOut[23]~reg0.CLK
-clk => dataOut[24]~reg0.CLK
-clk => dataOut[25]~reg0.CLK
-clk => dataOut[26]~reg0.CLK
-clk => dataOut[27]~reg0.CLK
-clk => dataOut[28]~reg0.CLK
-clk => dataOut[29]~reg0.CLK
-clk => dataOut[30]~reg0.CLK
-clk => dataOut[31]~reg0.CLK
-dataOut[0] <= dataOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[1] <= dataOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[2] <= dataOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[3] <= dataOut[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[4] <= dataOut[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[5] <= dataOut[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[6] <= dataOut[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[7] <= dataOut[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[8] <= dataOut[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[9] <= dataOut[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[10] <= dataOut[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[11] <= dataOut[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[12] <= dataOut[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[13] <= dataOut[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[14] <= dataOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[15] <= dataOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[16] <= dataOut[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[17] <= dataOut[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[18] <= dataOut[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[19] <= dataOut[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[20] <= dataOut[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[21] <= dataOut[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[22] <= dataOut[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[23] <= dataOut[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[24] <= dataOut[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[25] <= dataOut[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[26] <= dataOut[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[27] <= dataOut[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[28] <= dataOut[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[29] <= dataOut[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[30] <= dataOut[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-dataOut[31] <= dataOut[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cpu|pc:program_counter
+|cpu|pc:PC
 Clk => regpc[0].CLK
 Clk => regpc[1].CLK
 Clk => regpc[2].CLK
@@ -357,7 +280,84 @@ address[30] <= regpc[30].DB_MAX_OUTPUT_PORT_TYPE
 address[31] <= regpc[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|control:CONTROL
+|cpu|instructionmemory:Intruction_Memory
+address[0] => memoria.RADDR
+address[1] => memoria.RADDR1
+address[2] => memoria.RADDR2
+address[3] => memoria.RADDR3
+address[4] => memoria.RADDR4
+address[5] => memoria.RADDR5
+address[6] => memoria.RADDR6
+address[7] => memoria.RADDR7
+address[8] => memoria.RADDR8
+address[9] => memoria.RADDR9
+clk => dataOut[0]~reg0.CLK
+clk => dataOut[1]~reg0.CLK
+clk => dataOut[2]~reg0.CLK
+clk => dataOut[3]~reg0.CLK
+clk => dataOut[4]~reg0.CLK
+clk => dataOut[5]~reg0.CLK
+clk => dataOut[6]~reg0.CLK
+clk => dataOut[7]~reg0.CLK
+clk => dataOut[8]~reg0.CLK
+clk => dataOut[9]~reg0.CLK
+clk => dataOut[10]~reg0.CLK
+clk => dataOut[11]~reg0.CLK
+clk => dataOut[12]~reg0.CLK
+clk => dataOut[13]~reg0.CLK
+clk => dataOut[14]~reg0.CLK
+clk => dataOut[15]~reg0.CLK
+clk => dataOut[16]~reg0.CLK
+clk => dataOut[17]~reg0.CLK
+clk => dataOut[18]~reg0.CLK
+clk => dataOut[19]~reg0.CLK
+clk => dataOut[20]~reg0.CLK
+clk => dataOut[21]~reg0.CLK
+clk => dataOut[22]~reg0.CLK
+clk => dataOut[23]~reg0.CLK
+clk => dataOut[24]~reg0.CLK
+clk => dataOut[25]~reg0.CLK
+clk => dataOut[26]~reg0.CLK
+clk => dataOut[27]~reg0.CLK
+clk => dataOut[28]~reg0.CLK
+clk => dataOut[29]~reg0.CLK
+clk => dataOut[30]~reg0.CLK
+clk => dataOut[31]~reg0.CLK
+dataOut[0] <= dataOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataOut[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataOut[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataOut[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataOut[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataOut[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[8] <= dataOut[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[9] <= dataOut[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[10] <= dataOut[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[11] <= dataOut[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[12] <= dataOut[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[13] <= dataOut[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[14] <= dataOut[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[15] <= dataOut[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[16] <= dataOut[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[17] <= dataOut[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[18] <= dataOut[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[19] <= dataOut[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[20] <= dataOut[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[21] <= dataOut[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[22] <= dataOut[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[23] <= dataOut[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[24] <= dataOut[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[25] <= dataOut[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[26] <= dataOut[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[27] <= dataOut[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[28] <= dataOut[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[29] <= dataOut[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[30] <= dataOut[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[31] <= dataOut[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|control:Control
 in[0] => Decoder0.IN5
 in[1] => Decoder0.IN4
 in[2] => Decoder0.IN3
@@ -420,7 +420,7 @@ out[21] <= in[24].DB_MAX_OUTPUT_PORT_TYPE
 out[22] <= in[25].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|registerfile:RF
+|cpu|registerfile:Register_File
 Clk => register[0][0].CLK
 Clk => register[0][1].CLK
 Clk => register[0][2].CLK
@@ -4908,7 +4908,7 @@ outb[30] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
 outb[31] <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|extend:EX
+|cpu|extend:Extend
 in[0] => out[0].DATAIN
 in[1] => out[1].DATAIN
 in[2] => out[2].DATAIN
@@ -5949,7 +5949,7 @@ out[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 out[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|Multiplicador:MULT
+|cpu|Multiplicador:MULTIPLICADOR
 Clk => Clk.IN3
 St => St.IN1
 Done <= CONTROL:control.Done
@@ -6021,7 +6021,7 @@ Produto[31] <= w_produto[31].DB_MAX_OUTPUT_PORT_TYPE
 Reset => Reset.IN1
 
 
-|cpu|Multiplicador:MULT|ACC:acc
+|cpu|Multiplicador:MULTIPLICADOR|ACC:acc
 Clk => Saidas[0]~reg0.CLK
 Clk => Saidas[1]~reg0.CLK
 Clk => Saidas[2]~reg0.CLK
@@ -6206,7 +6206,7 @@ Saidas[31] <= Saidas[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Saidas[32] <= Saidas[32]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|Multiplicador:MULT|Adder:adder
+|cpu|Multiplicador:MULTIPLICADOR|Adder:adder
 OperandoA[0] => Add0.IN16
 OperandoA[1] => Add0.IN15
 OperandoA[2] => Add0.IN14
@@ -6258,7 +6258,7 @@ Soma[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Soma[16] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|Multiplicador:MULT|CONTROL:control
+|cpu|Multiplicador:MULTIPLICADOR|CONTROL:control
 Clk => state~1.DATAIN
 K => state.DATAB
 K => Selector1.IN1
@@ -6274,7 +6274,7 @@ Done <= Done.DB_MAX_OUTPUT_PORT_TYPE
 Reset => state~3.DATAIN
 
 
-|cpu|Multiplicador:MULT|Counter:counter
+|cpu|Multiplicador:MULTIPLICADOR|Counter:counter
 Load => i.OUTPUTSELECT
 Load => i.OUTPUTSELECT
 Load => i.OUTPUTSELECT
@@ -6832,7 +6832,7 @@ out[21] <= out[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[22] <= out[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|ADDRDecoding:ADD
+|cpu|ADDRDecoding:ADDR_Decoding
 addr[0] => LessThan0.IN64
 addr[0] => LessThan1.IN64
 addr[1] => LessThan0.IN63
@@ -6900,7 +6900,7 @@ addr[31] => LessThan1.IN33
 cs <= cs.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cpu|datamemory:MEM_DADOS
+|cpu|datamemory:Data_Memory
 Clk => memory.we_a.CLK
 Clk => memory.waddr_a[9].CLK
 Clk => memory.waddr_a[8].CLK
@@ -7107,6 +7107,13 @@ dout[30] <= dout[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[31] <= dout[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|cpu|Register:M
+in[0] => out[0]~reg0.DATAIN
+Clk => out[0]~reg0.CLK
+Reset => out[0]~reg0.ACLR
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |cpu|mux:MUX3
 sel => out.OUTPUTSELECT
 sel => out.OUTPUTSELECT
@@ -7236,13 +7243,6 @@ out[28] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[29] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[30] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[31] <= out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cpu|Register:RegM
-in[0] => out[0]~reg0.DATAIN
-Clk => out[0]~reg0.CLK
-Reset => out[0]~reg0.ACLR
-out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cpu|Register:D2
