@@ -1,8 +1,10 @@
 /* 
+MIPS_CPU - ELTD05/ELTD15
+
 		Grupo 4:
-			Elias Figueiredo Chaves - 
+			Elias Figueiredo Chaves - 2021004408
 			Luiz Guilherme de Godoy Gerulaitis - 2020011186
-			Othon Augusto Lucena - 
+			Othon Augusto Lucena - 2020003021
 			
 		a) Qual a latência do sistema?
 			Resposta: 
@@ -10,22 +12,23 @@
 			
 		b) Qual o throughput do sistema?
 			Resposta: 
-			O throughput é de 1 instrução por clock quando o pipeline estiver cheio.
+			Quando há a ocupação total do pipeline, o throughput é de 1 instrução por ciclo de clock.
 			
 		c) Qual a máxima frequência operacional entregue pelo Time Quest Timing Analizer para o multiplicador e para o sistema? (Indique a FPGA utilizada)
 			Resposta: 
-			FPGA => Cyclone IV GX: EP4CGX150DF31I7
-			Foi analisado o Timing Analyzer (Slow 1200mV 100C Model)
-			Para o Multiplicador foi de 302.57MHz
-			Para o Sistema foi 65.92MHz
+			FPGA utilizada foi: Cyclone IV GX: EP4CGX150DF31I7AD
+			A frequência máxima operacional do Multiplicador foi de 248.32 MHz
+			A frequência máxima operacional do Sistema foi 107.79 MHz
+			Timing Analyzer: Slow 1200mV 100C Model
+			
 			
 		d) Qual a máxima frequência de operação do sistema? (Indique a FPGA utilizada)
 			Resposta: 
-			FPGA => Cyclone IV GX: EP4CGX150DF31I7
+			FPGA utilizada foi: Cyclone IV GX: EP4CGX150DF31I7AD
 			Como a multiplicação leva 34 pulsos de clock para ser realizada, a frequência do sistema tem que ser 34 vezes menor 
 			do que a do multiplicador. Desse modo as frequências ficaram as seguintes:
-			Para o Multiplicador foi de 300MHz
-			Para o Sistema foi 8.824MHz
+			Para o Multiplicador foi de 248.32 MHz
+			Para o Sistema foi 7.3035 MHz
 			
 		e) Com a arquitetura implementada, a expressão (A*B) – (C+D) é executada corretamente (se executada em sequência ininterrupta)? Por quê? 
 			O que pode ser feito para que a expressão seja calculada corretamente?
@@ -78,11 +81,11 @@ module cpu(
 	(*keep=1*)wire dataOutM;
 
 	pll	pll_inst (
-	.areset (rst),
-	.inclk0 (CLK),
-	.c0 (CLK_MUL),
-	.c1 (CLK_SYS),
-	);
+		.areset (rst),
+		.inclk0 (CLK),
+		.c0 (CLK_MUL),
+		.c1 (CLK_SYS),
+	);	
 	
 	assign ADDR = reg_d1_out;
 	assign WR_RD = ctrl2[1];
@@ -241,13 +244,6 @@ module cpu(
 		.din(Data_BUS_WRITE),
 		.dout(dout)
 	);
-	
-	//Register #(1)ATRASO (
-		//.Reset(rst), 
-		//.Clk(CLK_SYS), 
-		//.in(CS), 
-		//.out(atraso_out)
-	//);
 	
 	
 	// Mux depois da memória

@@ -1,5 +1,5 @@
 Flow report for Multiplicador
-Wed Jun 28 10:38:47 2023
+Mon Jul 10 10:02:39 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 28 10:38:47 2023       ;
+; Flow Status                        ; Successful - Mon Jul 10 10:02:39 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Multiplicador                               ;
 ; Top-level Entity Name              ; Multiplicador                               ;
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/28/2023 10:37:59 ;
+; Start date & time ; 07/10/2023 10:01:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Multiplicador       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 64355072183661.168795947903368         ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 450635862118.168899408534684           ; --            ; --          ; --               ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Multiplicador_tb ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Multiplicador_TB                       ; --            ; --          ; eda_simulation   ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation   ;
@@ -104,12 +104,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4838 MB             ; 00:00:07                           ;
-; Fitter               ; 00:00:23     ; 1.0                     ; 5831 MB             ; 00:00:09                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4755 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4863 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Total                ; 00:00:44     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4851 MB             ; 00:00:37                           ;
+; Fitter               ; 00:00:37     ; 1.0                     ; 5896 MB             ; 00:00:56                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4752 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 4861 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4719 MB             ; 00:00:02                           ;
+; Total                ; 00:01:07     ; --                      ; --                  ; 00:01:45                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,11 +118,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-GU1GT42P  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-2RC96HP4  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

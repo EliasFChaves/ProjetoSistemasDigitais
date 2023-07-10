@@ -18,13 +18,13 @@ module TB();
 		
 		CLKIN = 0;
 		rst = 0;
-		Data_BUS_READ = 32'h32323232;
+		Data_BUS_READ = 32'h0;
 		
-		#200 rst = 1;
-		#400 rst = 0;
+		#100 rst = 1;
+		#200 rst = 0;
 
-		#3533 $stop;
+		#3500 $stop;
 	end
 	
-	always #1.667 CLKIN = ~CLKIN;	
+	always #2.0135 CLKIN = ~CLKIN;	
 endmodule 
