@@ -23,7 +23,7 @@ module TB();
 		#100 Reset = 1;
 		#200 Reset = 0;
 
-		#3500 $stop;
+		#4500 $stop;
 	end
 	
 	always #2.0135 Clk = ~Clk;	

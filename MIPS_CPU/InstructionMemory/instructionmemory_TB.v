@@ -18,14 +18,16 @@ initial begin
 	clk = 0;
 	address = 10'b0000000000;	
 	
-	for (i=0; i < 25; i = i + 1) 
+	#10
+	for (i=0; i < 28; i = i + 1) 
 	begin
-		#20 address = i;
+		#20 address = address + 1;
 	end
 	
 end
 
-always #10 clk = ~clk;
+always #5 clk = ~clk;
+
 initial #1000 $stop;
 
 endmodule
